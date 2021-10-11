@@ -5,27 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Fundamentals</title>
+
+    <style>
+        #myBtn {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 99;
+          font-size: 18px;
+          border: none;
+          outline: none;
+          background-color: rgb(196, 98, 18);
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 4px;
+        }
+        
+        #myBtn:hover {
+          background-color: rgb(196, 98, 18);
+        }
+        </style>
 </head>
 <body>
-    <h1>Where to start</h1>    
+    <h1>Where to start learning web fundamentals</h1>    
     <div>
         <h4>Complete beginner</h4>
-        <p></p>
+        <p>we can began our journy by installing basic software like notepad
+        here we will show you some of the softwares that are good for beginners</p>
+        <img src="./beginner.jpg" width="300" height="300" alt="beginner">
+        <ul>
+            <li>text editor</li>
+        </ul>
+        <ol>
+            <li>visual studio code</li>
+            <li>notepad++</li>
+            <li>atom</li>
+        </ol>
+        <ul>
+            <li>web browser</li>
+        </ul>
+        <ol>
+            <li>google chrome</li>
+            <li>safari</li>
+            <li>opera</li>
+        </ol>
+        <ul>
+            <li>version control system</li>
+        </ul>
+        <ol>
+            <li>git hub</li>
+            <li>git</li>
+           <li>gitlab</li>
+        </ol>
     </div>
     <div>
         <h4>Moving onto scripting</h4>
-        <p></p>
+        <p>the next step is to learn html,css,js and backend languages like php,c#,python and js also.</p>
+        <img src="scripting.jpg" width="300" height="300" alt="script picture">
     </div>
     <div>    
         <h4>Frameworks and tooling</h4>
-        <p></p>
+        <p>if you learn about all above languages here you should strat with learning
+        client-side web development tools and then  client-side JavaScript frameworks and server-side website programming</p>
     </div>
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
+    <img src="./toolsandframework.jpg" width="300" height="300" alt="">
     <h1>Acknowledgements</h1>
-
-
-    <a href="firstPage.html">here is the first page</a>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn?retiredLocale=ar">web fundamentals</a></li>
+        <li><a href="https://pixabay.com/">pictures</a></li>
+        <li><a href="https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml">reference for back to top button</a></li>
+        <li><a href="https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml">target attribute</a></li>
+        <li><a href="https://www.electricireland.com/news/article/10-great-benefits-of-playing-sport">benifits of sports</a></li>
+    </ul>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <a href="firstPage.html" target="_blank">here is the first page</a>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
 </body>
 </html>
